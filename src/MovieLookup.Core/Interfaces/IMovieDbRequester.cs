@@ -5,6 +5,6 @@ namespace MovieLookup.Core.Interfaces
 {
     internal interface IMovieDbRequester
     {
-        Task<T> SendRequestAsync<T>(HttpRequestMessage httpRequestMessage) where T : class;
+        Task<IMovieDbResponse<T>> SendRequestAsync<T>(HttpRequestMessage httpRequestMessage) where T : class;
     }
 }

@@ -17,7 +17,7 @@ namespace MovieLookup.Core.Endpoints
             _movieDbRequester = movieDbRequester;
         }
 
-        public async Task<MovieDetails> GetMovieDetailsAsync(int movieId, string language = "en-US")
+        public async Task<IMovieDbResponse<MovieDetails>> GetMovieDetailsAsync(int movieId, string language = "en-US")
         {
             string address = $"movie/{movieId}?api_key={_apiKey}&language={language}";
 
