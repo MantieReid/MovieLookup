@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MovieLookup.Core
 {
-    internal class MovieDbRequester : IMovieDbRequester
+    public class MovieDbRequester : IMovieDbRequester
     {
         private readonly HttpClient _httpClient = new HttpClient() { BaseAddress = new Uri("https://api.themoviedb.org/3/") };
 

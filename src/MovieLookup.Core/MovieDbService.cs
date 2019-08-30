@@ -1,14 +1,18 @@
-﻿using MovieLookup.Core.Interfaces;
+﻿using MovieLookup.Core.Endpoints;
+using MovieLookup.Core.Endpoints.Interfaces;
+using MovieLookup.Core.Interfaces;
 
 namespace MovieLookup.Core
 {
     public class MovieDbService : IMovieDbService
     {
-        private readonly IMovieDbRequester _movieDbRequester = new MovieDbRequester();
+        public IMoviesEndpoint MoviesEndpoint { get; }
 
-        public MovieDbService()
+        public MovieDbService(string apiKey)
         {
+            var movieDbRequester = new MovieDbRequester();
 
+            MoviesEndpoint = new MoviesEndpoint(apiKey, movieDbRequester);
         }
     }
 }

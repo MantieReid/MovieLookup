@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace MovieLookup.Core.Interfaces
 {
-    internal interface IMovieDbRequester
+    public interface IMovieDbRequester
     {
         Task<IMovieDbResponse<T>> SendRequestAsync<T>(HttpRequestMessage httpRequestMessage) where T : class;
     }
