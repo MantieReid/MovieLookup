@@ -11,8 +11,8 @@
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     Width="800"
     Height="450"
-    Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{DynamicResource MaterialDesignFont}"
+        Background="#FFFAFAFA"
+        FontFamily="{DynamicResource MaterialDesignFont}"
   mc:Ignorable="d">
   <Grid>
     <Grid.ColumnDefinitions>
@@ -21,12 +21,18 @@
     </Grid.ColumnDefinitions>
 
 
-    <HamburgerMenu:HamburgerMenu Background="Blue"
+    <HamburgerMenu:HamburgerMenu Background="{DynamicResource Backgroundcolorforsidebar}"
                                  Grid.Column="0"
-                                 MenuIconColor="White"
-                                 SelectionIndicatorColor="White"
+                                 
+                                 MenuIconColor="Black"
+                                 SelectionIndicatorColor="Black"
                                  MenuItemForeground="White"
-                                 HorizontalAlignment="Left">
+                                 HorizontalAlignment="Left"
+                                 MinWidth="50"
+                                 Height="auto"
+                                 Foreground="#DDF70000">
+      <HamburgerMenu:HamburgerMenuItem Icon="flimstrip.png" Text="Movies" />
+
     </HamburgerMenu:HamburgerMenu>
 
   </Grid>
